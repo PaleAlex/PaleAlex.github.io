@@ -1,2 +1,2 @@
-# PaleAlex.github.io
-Meme stock 2021 Data Science project
+# Memestock analysis
+find me [https://palealex.github.io/](here)
