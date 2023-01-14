@@ -1,2 +1,3 @@
 # Memestock analysis
-find me [https://palealex.github.io/](here)
+find me [here](https://palealex.github.io/)
+
