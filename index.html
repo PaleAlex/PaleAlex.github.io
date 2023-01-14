@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Memestock Project</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+  <!-- Js Responsive tool -->
+
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.13.0/css/all.css"
+      integrity="sha384-Bfad6CLCknfcloXFOyFnlgtENryhrpZCe29RTifKEixXQZ38WheV+i/6YWSzkz3V"
+      crossorigin="anonymous"
+    />
+
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,600,600i,700,700i"
+    rel="stylesheet">
+
+  <!-- Vendor CSS Files -->
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Template Main CSS File -->
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- Script per grafici -->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-lite@4.17.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm//vega-embed@6"></script>
+
+  <!-- =======================================================
+  * Template Name: ComingSoon - v4.6.0
+  * Template URL: https://bootstrapmade.com/comingsoon-free-html-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  ======================================================== -->
+
+</head>
+
+<body>
+
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <a href="http://masterbigdata.it/projects" style="padding: 10px;border: 1px solid #ddd; border-radius: 5px;" target = "_blank"><img src="http://masterbigdata.it/sites/default/files/projects/Master-Projects.png" height="40px"></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#header">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Social_network_pumping">Social media pumping</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#clustering">Memestock or not?</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"href="#classification">To the moon!</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#Acknowledgement">Acknowledgements</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact">About us</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ======= Header ======= -->
+
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex flex-column align-items-center">
+      <h1>Stocks are going <span style = "color: #ff3333;">viral</span></h1>
+      <h2>social media influence the financial market</h2>
+      <div class="row content">
+        <img src="GME.png" class="img-fluid" style = "opacity: 0.75">
+        <img src="AMC.png" class="img-fluid" style = "opacity: 0.75">
+      </div>
+      <br>
+      <div class="social-links text-center">
+        <a href="https://www.kaggle.com/datasets/palealex/meme-stock-alerts" class="kaggle" target = "_blank" style="padding: 10px;border: 1px solid #ddd; border-radius: 5px;"><i class="fab fa-kaggle"></i></a>
+      </div>
+    </div>
+  </header>
+
+  <!-- End #header -->
+
+  <main id="main">
+
+    <!-- Intro section -->
+
+    <section id="Memestocks" class="Memestocks">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-md-6">
+            <!-- <h2 style = "color: #ff3333;">MEMESTOCKS INTRODUCTION</h2> -->
+            <p>
+                January 2021. <b>Gamestop</b>, the American video game company that saw
+                its shares rising up <b>from $20 to $400</b> in less than two weeks. The dynamic has probably fed on the rise of risk appetite
+                and pandemic boredom, in coincidence with a growing share of younger investors accessing stock trading opportunities
+                through low cost trading platforms on investing apps. Gamestop became overpriced due to the online coordination of <b>retail investors</b>,
+                started on a subReddit community called <b>Wall Street Bets (WSB)</b>.
+            </p>
+              <h3>Equities experienced exceptional volatility related to social media hype</h3>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              Although many researchers and
+              analysis of memestocks focus on WSB, data from other platforms and media outlets show that social
+              media dynamics around memestocks are broader than we thought.
+              <br>
+              In this project we focus on memestocks and their dynamics through: <br>
+            </p>
+            <ul>
+              <li>data on financial dynamics</li>
+              <li>social media platforms (Reddit and Twitter)</li>
+              <li>global news</li>
+            </ul>
+            <p class="fst-italic">
+              We study the phenomenon retroactively and we try to build an alarm system based on anomaly detection.
+            </p>
+          </div>
+        </div>
+        <br><br>
+        <div class="row content">
+          <h3 class = "text-center">Our data at a glance</h3>
+          <br>
+          <table class="table table-hover table-dark text-center" style = "opacity: 0.7">
+            <tbody>
+              <tr>
+                <td><strong>20.000</strong><br>newspapers</td>
+                <td><strong>18</strong><br>financial stocks</td>
+                <td><strong>2</strong><br>social networks</td>
+                <td><strong>1.700.000</strong><br>tweets</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
+    <!-- Media section -->
+
+    <section id="Media" class="Media">
+        <div class="container">
+            <div class="row content">
+                <h2 style="color: #ff3333"> GameStop GameChanger
+            </div>
+            <div class="row content">
+                <div class="col-lg-6">
+                    </h2>
+                    <p>
+                      At the beginning of 2021, the stocks of GME looked like a terrible buy.
+                      For about a decade, in fact, the Game stop business had deteriorated. Millennials were abandoning the habit of
+                      buying video games, preferring to play streaming or downloading.
+                      Restrictions due to the <b>Covid-19 pandemic</b> dealt another blow to Gamestop's business, by forcing stores to close.
+                      Wall Street hedge funds seized the opportunity and began shorting these stocks, betting to make money if Gamestop's value fell.
+                    </p>
+                </div>
+                <div class="col-lg-6 pt-4 pt-lg-0">
+                    <p>
+                      However, in less than two weeks, the shares of the struggling company rose from just $20 to almost $500 (more than 2.000%).
+                      In a matter of days Gamestop became the first case of a "meme stock" that is, <b>
+                      a company whose shares became overpriced due to the
+                      attention of social media and coordinated action of retail investors
+                      </b>. This dynamic was not backed by good performance of its underlying
+                      business.
+                    </p>
+                     <p class="fst-italic">
+                       After Gamestop, other companies, such as the AMC movie theatre chain, also enjoyed rapid and seemingly unwarranted increases in their stock prices.
+                     </p>
+                </div>
+            </div>
+
+            </div>
+</section>
+
+    <!-- The Financial Market section -->
+
+    <section id="The financial market" class="The financial market">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col-lg-6">
+          <div><h3 style = "color: #cda434" class="bi bi-quote">For the first time in history
+                retail investors
+                had an impact
+                on the financial market,
+                by coordinating
+                on a virtual platform
+                <span style = "font-size:12px;">L. Longo</span>
+            </h3>
+          </div>
+          <p>
+              We interviewed economists <span style = "color: #cda434">Ilaria Gianstefani</span> and <span style = "color: #cda434">Luigi Longo</span> from the IMT School of Advanced Studies (Lucca, Italy)
+              who started studying memestocks and published the paper
+              <i><a href="https://arxiv.org/pdf/2203.13790.pdf"> The echo chamber effect resounds on financial markets: a social media alert system for meme stocks</a></i>
+               motivated by the novelty and exceptionality of the Gamestop event.
+          </p>
+
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              They think that GME case inaugurated memestocks as a new phenomenon due to the unprecedented
+              impact caused by retail investors – usually considered as noise traders.
+              <br>Researchers across different disciplines are studying meme stocks.<br>
+              They understand memestocks as a <b>relevant innovation in economic behaviour</b>: for the first time retail
+              investors organised on a virtual platform, by coordinating their activity, were able to cause an impact on
+              the financial market and create high instability.
+            </p>
+
+          </div>
+        </div>
+        <div class="row content">
+          <img src="words.png" class="img-fluid" style = "opacity: 0.7">
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Social network dynamics section part1111111111 -->
+
+    <section id="Social_network_pumping" class="Social network dynamics">
+      <div class="container">
+        <div class="row content">
+          <h2 style = "color: #ff3333">SOCIAL MEDIA PUMPING</h2>
+        </div>
+        <div class="row content">
+          <div class="col-lg-6">
+
+            <h3 style = "color: #cda434" class="bi bi-quote">The whole Gamestop saga
+              may have been manipulated
+              by an expert of financial markets
+              an analyst hiding behind
+              the influencer name of
+              <i>DeepFuckingValue</i>
+              <span style = "font-size:12px;">I. Gianstefani</span>
+            </h3>
+            <p>
+              The impact of retail investors has originated on <b>Reddit</b>, a network of communities where people
+			        can participate in different groups – the subreddits – each one discussing a particular interest,
+			        hobby or passion. Since the GameStop short squeeze, Reddit became renowned as an arena for self-organised
+			        social media-driven investment behaviours. Fueled by members of the Reddit community, these investors decided
+			        to flip the switch on large hedge funds that were shorting certain businesses, businesses that had a certain affective
+			        value to the people, they claimed. As more retail investors joined in, the result was an <b>acceleration of shares’ price</b>,
+			        a short squeeze —  as short sellers bailout to cut their losses. Notwithstanding the popularity of this version of the story,
+			        the experts we interviewed also advanced the hypothesis that the whole Gamestop event may have been manipulated by the expert
+			        of financial markets, and analyst, hiding behind the influencer name of ‘DeepFuckingValue’.<br>
+            </p>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              AMC and GameStop were two prevalent names that caught fire on reddit, inciting an unprecedented number of newbie traders to invest.
+			        After them, other companies also enjoyed web popularity and consequent investment behaviours.
+			        But <strong>going viral has not led all stocks to a Gamestop-like effect.</strong> Why? That is where we step in.<br>
+              As communities proliferated around the most disparate topics, many subreddits dedicated to
+              the financial market have popped-up. These communities work as incubators of online “hype” associated with stock prices.
+              WallStreetBets is the most popular among them. With more than 12.000.000 subscribers, WSB is one
+              of the 55 biggest communities, overall.
+            </p>
+            <p class="fst-italic">
+              As stocks gain visibility on Reddit,
+              they are mentioned across different subreddits. The majority of popular stocks on
+              Reddit mark their presence on four other communities, beyond WSB.
+            </p>
+          </div>
+        </div>
+        <div class="row content">
+          <img src="PopularitySubredditsPages.png" class="img-fluid">
+        </div>
+        <br>
+
+        <div class="row content" style = "opacity: 0.7; display: table; margin: 0 auto;">
+          <div id="bubblereddit"></div>
+          <script src ="assets\js\PresenceBubble.js"></script>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Social network dynamics section part2222222 -->
+
+    <section id="Social network dynamics" class="Social network dynamics">
+
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-8">
+            <h3>Not only on Reddit
+            </h3>
+
+            <div class="row" style = "opacity: 0.7">
+              <div class="col">
+                <div id="PositiveNews"></div>
+                <script src ="assets\js\PositiveNews.js"></script>
+              </div>
+            </div>
+
+            <div class="row" style = "opacity: 0.7">
+              <div class="col">
+                <div id="NegativeNews"></div>
+                <script src ="assets\js\NegativeNews.js"></script>
+              </div>
+            </div>
+
+            <p>
+              Soon enough, this “movement” had spillovers beyond the Reddit forum.
+              In the Gamestop case, the very same day Tesla CEO, Elon Musk, retweeted
+              a link to the r/wallstreetbets trading increased and the stock rose nearly
+              140 percent, in after-hours trading. Regarding GameStop and AMC theatre shares,
+              the Central Bank of America specifically noted that the volume and volatility of
+              those stocks might be related to high activity on Twitter.<br>
+              Online activity of WSB users’ is also related with the activity on more
+              traditional media outlets, such as newspapers. Cross-referencing data from
+              Reddit mentions and data from news articles across the world, we found that
+              <b>the increased activity on the subreddit, measured in daily frequency of the stocks’
+              mentions, is positively correlated with the volume of press articles mentioning the company</b>.
+              <br>
+              On days when a stock reaches maximum daily mentions on Wall Street Bets, the press does not reflect
+              social media positivity, though. On the contrary: <b>articles mentioning the companies whose shares go
+              viral on Reddit tend to display an overall negative tone</b>. While this observation does not allow any
+              categorical statements, this may be linked with a feature of meme stock events, highlighted by many
+              analysts. <br>A stock’s popularity on social media is usually unrelated to the positive performance of
+              the business and of the company's fundamentals. This fact reinforces a common criticism of Wall Street,
+              the excessive decoupling of the financial market from the “real economy”.
+            </p>
+          </div>
+          <div class="col-lg-4 pt-4 pt-lg-0">
+            <br><br><img src="AverageNewsMentions.png" class="img-fluid" style = "opacity: 0.7;">
+          </div>
+
+        </div>
+
+        <br><br>
+
+
+        <div class="row" style = "opacity: 0.7">
+          <div class="col">
+            <div id="PositiveNews"></div>
+            <script src ="assets\js\PositiveNews.js"></script>
+          </div>
+        </div>
+
+        <div class="row" style = "opacity: 0.7">
+          <div class="col">
+            <div id="NegativeNews"></div>
+            <script src ="assets\js\NegativeNews.js"></script>
+          </div>
+        </div>
+
+        <br><br><br>
+
+        <div class="row content">
+          <table class="table table-hover table-dark text-center" style = "opacity: 0.7">
+            <thead>
+              <tr>
+                <th scope="col" style = "color: #F08B7F;">GME</th>
+                <th scope="col">Nodes</th>
+                <th scope="col">Edges</th>
+                <th scope="col">Max node degree</th>
+                <th scope="col">Avg node degree</th>
+                <th scope="col">Assortativity</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">BEFORE</th>
+                <td>19.836</td>
+                <td>27.890</td>
+                <td>5.143</td>
+                <td>2,96</td>
+                <td>-0,18</td>
+
+              </tr>
+              <tr>
+                <th scope="row">AFTER</th>
+                <td>21.121</td>
+                <td>32.491</td>
+                <td>2.346</td>
+                <td>3,47</td>
+                <td>-0,21</td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <img src="gme_prima.png" class="img-fluid" >
+          </div>
+          <div class="col-lg-6">
+            <img src="gme_dopo.png" class="img-fluid" >
+          </div>
+        </div>
+
+
+        <br><br>
+
+
+        <div class="row content">
+          <table class="table table-hover table-dark text-center" style = "opacity: 0.7">
+            <thead>
+              <tr>
+                <th scope="col" style = "color: #F08B7F;">WISH</th>
+                <th scope="col">Nodes</th>
+                <th scope="col">Edges</th>
+                <th scope="col">Max node degree</th>
+                <th scope="col">Avg node degree</th>
+                <th scope="col">Assortativity</th>
+
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">BEFORE</th>
+                <td>642</td>
+                <td>793</td>
+                <td>524</td>
+                <td>4,14</td>
+                <td>-0,54</td>
+
+              </tr>
+              <tr>
+                <th scope="row">AFTER</th>
+                <td>1.397</td>
+                <td>2.583</td>
+                <td>1.145</td>
+                <td>5,92</td>
+                <td>-0,61</td>
+
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="row content">
+          <div class="col-lg-6">
+            <img src="wish_prima.png" class="img-fluid" >
+          </div>
+          <div class="col-lg-6">
+            <img src="wish_dopo.png" class="img-fluid" >
+          </div>
+        </div>
+
+
+        <figcaption class = "text-center">Circular layout representing the network of tweets interactions of GME and WISH as opposite stock cases (successful vs unsuccessful). We evaluate the network integrated over 10 days before and 10 days after the respective mention peak on WSB.
+        The graphs underline communities interactions, the size of the networks and the different amplification effect in the two cases.</figcaption>
+
+      </div>
+    </section>
+
+    <!-- Social network dynamics section part3333333 -->
+
+    <section id="Social network dynamics" class="Social network dynamics">
+      <div class="container">
+        <div class="row content">
+          <div class="col-lg-4">
+            <br><br> <img src="VarianceofPositiveTweets.png" class="img-fluid" style = "opacity: 0.7;">
+          </div>
+
+          <div class="col-lg-8 pt-4 pt-lg-0">
+            <h3 style= "text-align: right;">Wall Street Bets polarise sentiment on Twitter
+            </h3>
+            <div class="row content" style = "opacity: 0.7; display: table; margin: 0 auto;">
+              <div id="PositiveTweets"></div>
+              <script src ="assets\js\PositiveTweets.js"></script>
+            </div>
+
+            <div class="row content" style = "opacity: 0.7; display: table; margin: 0 auto;">
+              <div id="NegativeTweets"></div>
+              <script src ="assets\js\NegativeTweets.js"></script>
+            </div>
+            <p>
+              On the day of maximum social network activity around a specific stock,
+              that is when there is a spike in mentions on WSB, <b>on Twitter we found a
+              bigger percentage of positive tweets among those mentioning the ticker</b>.<br>
+              Only tweets mentioning GME display a prevailing negative
+              sentiment on days of mentions’ peak. Gamestop not only recorded the highest traded
+              volume in 2021, but also dragged animated debates. Committing users from different
+              social media outlets, these discussions agglutinate a heterogenous plethora of voices
+              and opinions, which eventually took diverging positions, sometimes extrapolating Wall
+              Street and the financial market, flirting with populist tones, when not lapsing into
+              hate speech and even antisemitism. Given the exceptional polarisation of discourse
+              around GameStop one can possibly understand the amount of negative tweets and the
+              lack of a significant difference among positive and negative tweets per day.<br>
+              We also analysed tweet sentiment in relation to activity on Reddit. Data suggest a <b>correlation
+              between maximum activity on Reddit and the stabilisation of positive tweets’ statistical behaviour</b>.
+              Posts who show different tones, after the peak polarise toward a shared, not much variable, sentiment.
+            </p>
+          </div>
+
+
+
+        </div>
+        <br><br>
+
+
+
+      </div>
+    </section>
+
+
+    <!-- The clustering algorithm section -->
+
+    <section id="clustering" class="algorithm">
+      <div class="container">
+        <div class="row content">
+          <h2 style = "color: #ff3333"> MEMESTOCK OR NOT MEMESTOCK?
+        </div>
+        <div class="row content">
+          <div class="col-lg-6">
+            </h2>
+            <p>
+              Social media mentions, mainstream media coverage and online discussion polarisation may be responsible for the ‘hype’
+              around a stock. But this is not the only factor for a company share to become a meme stock. Gamestop came to be considered
+              as a paradigmatic case, but not every stock popular on Reddit displays similar repercussions on volume, price dynamics
+              and volatility.<br>
+              Although the American financial authority reported that a meme stock is characterised by <i>“the convergence of large price moves,
+              large volume changes, large short interest, frequent mentions on social media, and significant coverage in mainstream media”</i>
+              (SEC, 2021), the interaction of these factors and their reciprocal significance have not been explored so far.<br> Thus, while dealing
+              with such an undefined phenomenon and large amounts of data, we used machine learning unsupervised techniques to look for meaningful
+              groups among the stocks selected for this work.<br>In the identification of different groups <b>the most discriminant features confirmed to be related to social media activity
+              and interest</b>, to Wall Street Bet and its echo across other platforms such as other subreddits and even Twitter.
+            </p>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              Also relevant is the incidence of financial data: the presence of short sales percentage among most relevant variables
+              supports the fact that <b>the meme stock phenomenon involves stocks which are often considered bad deals and therefore shorted</b>.<br>
+              We tried different algorithms and all resulted in the same cluster division.
+              Among the stocks who gained visibility online <b>three separeted groups have been identified</b>: one is composed only by GME and AMC, which are also widely recognized as paradigmatic cases.
+              A second group reunites the shares of companies that went viral but hardly ever exceeded
+              the anomaly price return threshold that we fixed to be 50% within 10 consecutive days. Most of them are well-known companies
+              (Facebook, Tesla, Apple), that have high capitalization and whose productive activities are not in a bad shape as those shorted.
+              Finally, a third group (e.g. Ironnet inc., SoFi Technologies, Root Inc) reunites smaller companies with
+              lower market capitalization and thus more prone to crowd pumping dynamics. In fact, during 2021, most of them experienced at least
+              a period of high volatility on stock price due to social activities.
+            </p>
+          </div>
+        </div>
+        <br><br>
+        <figcaption class = "text-center">PCA results for clustering</figcaption>
+
+        <div class="row content" style = "opacity: 0.7; display: table; margin: 0 auto;">
+
+          <div class="col">
+            <div id="scorespca"></div>
+            <script src ="assets\js\scorespca.js"></script>
+          </div>
+
+        </div>
+
+        <br><br>
+
+        <div class="row content" style = "opacity: 0.7; display: table; margin: 0 auto;">
+
+          <div class="col">
+            <div id="loadingspca"></div>
+            <script src ="assets\js\loadingspca.js"></script>
+          </div>
+
+        </div>
+
+
+
+      </div>
+    </section>
+
+    <!-- The classification algorithm section -->
+
+    <section id="classification" class="algorithm">
+      <div class="container">
+
+        <div class="row content">
+          <h2 style = "color: #ff3333">TO THE MOON!</h2>
+        </div>
+        <div class="row content">
+          <div class="col-lg-6">
+
+            <p>
+
+              We collected a huge amount of daily data. We want to try to answer one last question: <b>are these data relevant enough to build an effective predictive model</b>?
+              The alert signal must be triggered as soon as the 50% cumulative price return threshold is expected to be exceeded in the next 10 days. For this purpose, we trained some traditional models (Logistic Regression, Ridge Classifier, LDA, Linear SVC, Random Forest Classifier) on a training set consisting of the 16 tickers analysed.
+              We prefer high precision (that means no wrong investments) rather than high recall. <br>The best performing model resulting after cross validation and hyperparameter tuning on the training set is a Random Forest Classifier.
+
+            </p>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              For the test set, we have selected two other tickers among the most cited ones in WSB: SNDL (Sundial Growers Inc) and
+              LCID (Lucid Motors). They both registered anomalous stock price raises during 2021. <br>
+              Results aren't great, but still good with an <b>overall 95% accuracy, 100% precision and 6% recall</b>.
+              In fact, although the trained model is not able to detect any of the LCID anomalies, we have two matching
+              alert for SNDL that would have meant an at least 50% ROI and that span from a "buy" signal on the 26th day
+              to a "sell" signal within the 36th day.<br>
+              We are missing the real peak, however this is a good start.
+            </p>
+          </div>
+        </div>
+        <div class="row content">
+          <img src="alert.png" class="img-fluid" style = "opacity: 0.7;">
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Acknowledgements section ======= -->
+
+    <section id="Acknowledgement" class="algorithm">
+      <div class="container">
+
+        <div class="row content">
+          <div class="col">
+            <h3 style = "color: #ff3333"> Acknowledgements </h3>
+            <p>
+              We thank Ilaria Gianstefani and Luigi Longo (IMT, Lucca), for being our experts interviewees for this piece, and also for exchanging interesting ideas and sharing experience.
+              We thank the authors of <a href="https://yolostocks.live/">YoloStocks.live</a> for the access to their data under the CC By 4.0 license.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======= Contact Us Section ======= -->
+
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title">
+          <h2><strong>About us</strong></h2>
+        </div>
+
+        <div class="row justify-content-center">
+
+          <div class="col-lg-8">
+            <div class="info-wrap">
+
+              <div class="row" style = "min-height: 100px; display:flex;">
+                <div class="col-lg-2 info">
+                  <img src="Ale2.jpg" alt="Image" height="60" width="60" class="mx-auto d-block" style = "border-radius: 50%;"/></div>
+                <div class="col-lg-8 info">
+                  <h4 class="text-left">Alessandro Ciocchetti</h4>
+                  <p class="text-left">Looking for a way to make enough money and blow everything up</p></div>
+                <div class="col-lg-2 info">
+                  <a href="https://www.linkedin.com/in/ac-palealex/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="mailto:aless.ciocchetti@gmail.com"><i class="fa fa-envelope"></i></a>
+                </div>
+              </div>
+
+              <div class="row" style = "min-height: 100px; display:flex;">
+                <div class="col-lg-2 info">
+                  <img src="Gwy2.jpg" alt="Image" height="60" width="60" class="mx-auto d-block" style = "border-radius: 50%;"/></div>
+                <div class="col-lg-8 info">
+                  <h4 class="text-left">Gwydyon Marchelli</h4>
+                  <p class="text-left">Researcher as a hobby. My real work is to play D&D and board games with my parents</p></div>
+                <div class="col-lg-2 info">
+                  <a href="https://www.linkedin.com/in/gwydyon-marchelli-364014207" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="mailto:gwydyon.marchelli@gmail.com"><i class="fa fa-envelope"></i></a>
+                </div>
+              </div>
+
+              <div class="row" style = "min-height: 100px; display:flex;">
+                <div class="col-lg-2 info">
+                  <img src="Lorena2.jpg" alt="Image" height="60" width="60" class="mx-auto d-block" style = "border-radius: 50%;"/></div>
+                <div class="col-lg-8 info">
+                  <h4 class="text-left">Lorena Volpini</h4>
+                  <p class="text-left">Hello buddies, is it too late to change the world?</p></div>
+                <div class="col-lg-2 info">
+                  <a href="https://www.linkedin.com/in/lorena-volpini/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="mailto:lorenavolpini@gmail.com"><i class="fa fa-envelope"></i></a>
+                </div>
+              </div>
+
+              <div class="row" style = "min-height: 100px; display:flex;">
+                <div class="col-lg-2 info">
+                  <img src="Olga2.jpg" alt="Image" height="60" width="60" class="mx-auto d-block" style = "border-radius: 50%;"/></div>
+                <div class="col-lg-8 info">
+                  <h4 class="text-left">Olga Cozzolino</h4>
+                  <p class="text-left">Materials: 50% statistics and data visualization, 50%... a gaussian with mean on good times and parties</p></div>
+                <div class="col-lg-2 info">
+                  <a href="https://www.linkedin.com/in/olga-cozzolino-phd-a57588109/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="mailto:olga_91@hotmail.it"><i class="fa fa-envelope"></i></a>
+                </div>
+              </div>
+
+              <div class="row" style = "min-height: 100px; display:flex;">
+                <div class="col-lg-2 info">
+                  <img src="Davide2.jpg" alt="Image" height="60" width="60" class="mx-auto d-block" style = "border-radius: 50%;"/></div>
+                <div class="col-lg-8 info">
+                  <h4 class="text-left">Davide Bottinelli</h4>
+                  <p class="text-left">Mark this: only real philosophers could jump from a Philosophy Master's Degree to a Data Science Master</p></div>
+                <div class="col-lg-2 info">
+                  <a href="https://www.linkedin.com/in/davidebottinelli/" target="_blank"><i class="fab fa-linkedin"></i></a>
+                  <a href="mailto:d.bottinelli1996@gmail.com"><i class="fa fa-envelope"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- End Contact Us Section -->
+
+    <!-- ======= Footer ======= -->
+    <footer id="footer">
+      <div class="container">
+        <div class="copyright">
+          Project thought and made by GroupOne, yr. 2022
+        </div>
+        <div class="credits">
+          Technical report (available only in Italian language) <strong><a href="REPORT.pdf" target="_blank">here</a></strong>
+        </div>
+      </div>
+    </footer><!-- End #footer -->
+
+  </main><!-- End #main -->
+
+  <!-- back to top button -->
+
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Template Main JS File -->
+  <script src="assets/js/main.js"></script>
+
+
+</body>
+
+</html>
